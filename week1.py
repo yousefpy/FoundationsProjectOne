@@ -33,7 +33,7 @@ order_list = #complete me!
 # If the total is less than 20 KD, that means we can't accept the credit card for payment
 # In that case return False, to indicate that for this total price a credit card CANNOT be used for payment.
 def accept_credit_card(total):
-	# complete me!
+	#complete me!
 
 
 # 1) Print the menu and the prices of all the items in a nice readable format.
@@ -41,18 +41,7 @@ def accept_credit_card(total):
 	# "Let me repeat your order, sir/ma'am."
 # 3) Print the order list.
 # 4) Then print the following message:
-	# "Is that correct? (yes/no)"
-		# if the user enters no, print:
-		# "Oh I'm sorry, please modify your order list in the code to what you want and come back!"
-		# And terminate the program.
-
-		# if the user enters yes, print:
-		# "That'll be <PRICE_HERE> KD."
-# 5) Check the total price of the order, if credit card is accepted print:
-	# "Would you like to pay with a credit card? (yes/no)"
-		# if no, print:
-		# "Cash is fine then :)"
-
-		# if yes, print:
-		# "I'll take your credit card then! :)"
-# 6) Lastly, print "Thank you for shopping at <CUPCAKE_SHOP_NAME>!"
+	# "That'll be <PRICE_HERE> KD."
+# 5) Check the total price of the order, if credit card is acceptable print:
+	# "You can pay with credit card if you want!"
+# 6) Lastly, print "Thank you for shopping at <CUPCAKE_SHOP_NAME>"
