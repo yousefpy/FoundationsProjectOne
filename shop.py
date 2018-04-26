@@ -16,6 +16,9 @@ signature_flavors = ['teehee', 'vice']#complete me!
 order_list = []
 
 def print_menu():
+	"""
+	Print the items in the menu dictionary.
+	"""
 	print("Our menu:")
 	for item in menu:
 		print("- \"%s\" (KD %s)" % (item, menu[item]))
@@ -23,6 +26,9 @@ def print_menu():
 # your code goes here!
 #------------------ START -------------------#
 def print_originals():
+	"""
+	Print the original flavor cupcakes.
+	"""
 	print("Our original flavor cupcakes (KD %s each):" % original_price)
 	for item in original_flavors:
 		print("- \"%s\"" % item)
@@ -31,6 +37,9 @@ def print_originals():
 
 #------------------ START -------------------#
 def print_signatures():
+	"""
+	Print the signature flavor cupcakes.
+	"""
 	print("Our signature flavor cupcake (KD %s each):" % signature_price)
 	for item in signature_flavors:
 		print("- \"%s\"" % item)
@@ -38,6 +47,9 @@ def print_signatures():
 
 #------------------ START -------------------#
 def is_valid_order(order):
+	"""
+	Check if an order exists in the shop.
+	"""
 	if order in menu:
 		return True
 	elif order in original_flavors:
@@ -51,6 +63,9 @@ def is_valid_order(order):
 #------------------ START -------------------#
 # user input loop for order_list
 def get_order():
+	"""
+	Repeatedly ask customer for order until they type "Exit".
+	"""
 	order_list = []
 	order = input("What's your order? (Enter the exact spelling of the item you want. Type 'Exit' to end your order.)\n")
 	while order.lower() != "exit":
@@ -63,31 +78,25 @@ def get_order():
 
 def accept_credit_card(total):
 	"""
-	A function that checks whether an order is eligible for credit card payment
+	Return whether an order is eligible for credit card payment.
 	"""
 	# your code goes here!
-	if total >= 5:
-		return True
-	else:
-		return False
 
 def get_total_price(order_list):
-	# your code goes here!
+	"""
+	Calculate and return total price of the order.
+	"""
 	total = 0
-	for order in order_list:
-		order = order.lower()
-		if order in menu:
-			total += menu[order]
-		elif order in original_flavors:
-			total += original_price
-		elif order in signature_flavors:
-			total += signature_price
+
+	# your code goes here!
 
 	return total
 
-# prints here
 #------------------ START -------------------#
 def print_order(order_list):
+	"""
+	Print the order of the customer.
+	"""
 	print()
 	print("Your order is: ")
 	for order in order_list:
