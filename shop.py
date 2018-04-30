@@ -99,13 +99,7 @@ def print_order(order_list):
 	"""
 	print()
 	print("Your order is: ")
-	for order in order_list:
-		print("- %s " % order)
-	print()
-	price = get_total_price(order_list)
-	print("That'll be KD %s" % price)
-	if accept_credit_card(price):
-		print("This order is eligible for credit card payment.")
 
-	print("Thank you for shopping at %s" % cupcake_shop_name)
+	# your code goes here!
+
 #------------------ FINISH -------------------#
