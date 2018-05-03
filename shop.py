@@ -50,14 +50,9 @@ def is_valid_order(order):
 	"""
 	Check if an order exists in the shop.
 	"""
-	if order in menu:
-		return True
-	elif order in original_flavors:
-		return True
-	elif order in signature_flavors:
-		return True
-	else:
-		return False
+
+	# your code goes here!
+
 #------------------ FINISH -------------------#
 
 #------------------ START -------------------#
