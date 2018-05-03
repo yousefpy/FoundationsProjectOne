@@ -19,11 +19,10 @@ def print_menu():
 	"""
 	Print the items in the menu dictionary.
 	"""
-	print("Our menu:")
-	for item in menu:
-		print("- \"%s\" (KD %s)" % (item, menu[item]))
 
-# your code goes here!
+	# your code goes here!
+
+
 #------------------ START -------------------#
 def print_originals():
 	"""
