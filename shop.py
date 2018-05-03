@@ -67,11 +67,9 @@ def get_order():
 	Repeatedly ask customer for order until they end their order by typing "Exit".
 	"""
 	order_list = []
-	order = input("What's your order? (Enter the exact spelling of the item you want. Type 'Exit' to end your order.)\n")
-	while order.lower() != "exit":
-		if is_valid_order(order):
-			order_list.append(order)
-		order = input()
+
+	# your code goes here!
+
 	return order_list
 #------------------ FINISH -------------------#
 
