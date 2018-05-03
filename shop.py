@@ -11,8 +11,8 @@ original_price = 2
 signature_price = 2.750
 
 ############################# Start Here! ##############################
-cupcake_shop_name = "We don't Give A Fork"#complete me!
-signature_flavors = ['teehee', 'vice']#complete me!
+cupcake_shop_name = #complete me!
+signature_flavors = #complete me!
 order_list = []
 
 def print_menu():
