@@ -41,8 +41,9 @@ def print_signatures():
 	Print the signature flavor cupcakes.
 	"""
 	print("Our signature flavor cupcake (KD %s each):" % signature_price)
-	for item in signature_flavors:
-		print("- \"%s\"" % item)
+
+	# your code goes here!
+
 #------------------ FINISH -------------------#
 
 #------------------ START -------------------#
