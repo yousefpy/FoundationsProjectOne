@@ -30,8 +30,9 @@ def print_originals():
 	Print the original flavor cupcakes.
 	"""
 	print("Our original flavor cupcakes (KD %s each):" % original_price)
-	for item in original_flavors:
-		print("- \"%s\"" % item)
+
+	# your code goes here!
+
 #------------------ FINISH -------------------#
 
 
