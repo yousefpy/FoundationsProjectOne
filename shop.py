@@ -11,8 +11,8 @@ original_price = 2
 signature_price = 2.750
 
 ############################# Start Here! ##############################
-cupcake_shop_name = #complete me!
-signature_flavors = #complete me!
+cupcake_shop_name = "Cup and Cake"
+signature_flavors = ["Slice of life" , "Piece of Mind", "4get it"]
 order_list = []
 
 
@@ -20,7 +20,9 @@ def print_menu():
     """
     Print the items in the menu dictionary.
     """
-    # your code goes here!
+    print ("Our Menu:")
+    for key,value in menu:
+        print "%s (%s)," % (key, value)
 
 
 def print_originals():
@@ -28,7 +30,8 @@ def print_originals():
     Print the original flavor cupcakes.
     """
     print("Our original flavor cupcakes (KD %s each):" % original_price)
-    # your code goes here!
+    for item in original_flavors:
+        print original_flavors[item],
 
 
 def print_signatures():
@@ -36,22 +39,49 @@ def print_signatures():
     Print the signature flavor cupcakes.
     """
     print("Our signature flavor cupcake (KD %s each):" % signature_price)
-    # your code goes here!
+    for item in signature_flavors:
+        print signature_flavors[item],
 
 
 def is_valid_order(order):
     """
     Check if an order exists in the shop.
     """
-    # your code goes here!
+    founded = 0
+    if menu.has_key(order):
+        founded = 1
+        break
 
+    for item in original_flavors:
+        if original_flavors[item] == order:
+            founded = 1
+            break
+
+    for item in signature_flavors:
+        if signature_flavors[item] == order:
+            founded = 1
+            break
+
+    if founded =1:
+        return True
+    else:
+        return False
 
 def get_order():
     """
     Repeatedly ask customer for order until they end their order by typing "Exit".
     """
     order_list = []
-    # your code goes here!
+    print ("Welcome to Cup of Cake, Enter your order exactly\
+     as you see in the menu. whenever you done, type 'Exit' ",)
+    user_input = raw_input()
+    while user_input != "Exit":
+        if is_valid_order(user_input) == True:
+            order_list.append(user_input)
+            user_input = raw_input()
+        else:
+            user_input = raw_input()
+
 
     return order_list
 
