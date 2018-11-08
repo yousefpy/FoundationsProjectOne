@@ -128,8 +128,8 @@ def print_order(order_list):
     print("Your order is: ")
     for i in order_list:
         print ("- %s" %i)
-    print ("that will be KD %s" % get_total_price(order_list))
+    print ("that will be KD %s." % get_total_price(order_list))
     accept_credit_card(get_total_price(order_list))
-    print ("Thanks for shopping at %s" %cupcake_shop_name)
+    print ("Thanks for shopping at %s." %cupcake_shop_name)
 
 
