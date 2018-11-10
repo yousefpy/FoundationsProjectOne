@@ -47,22 +47,11 @@ def is_valid_order(order):
     """
     Check if an order exists in the shop.
     """
-    founded = 0
-    for item in menu:
-        if item == order:
-            founded = 1
-
-    for item in original_flavors:
-        if item == order:
-            founded = 1
-            break
-
-    for item in signature_flavors:
-        if item == order:
-            founded = 1
-            break
-
-    if founded == 1:
+    if order in menu:
+        return True
+    elif order in original_flavors:
+        return True
+    elif order in signature_flavors:
         return True
     else:
         return False
@@ -71,18 +60,16 @@ def get_order():
     """
     Repeatedly ask customer for order until they end their order by typing "Exit".
     """
-    order_list = []
+    #order_list = []
     print ("Welcome to %s , Enter your order exactly \
 as you see in the menu. whenever you done, type 'Exit' " %cupcake_shop_name)
     user_input = input()
-    while user_input != "Exit":
+    while user_input.lower() != "exit":
         if is_valid_order(user_input):
             order_list.append(user_input)
-            user_input = input()
-        else:
-            user_input = input()
-
-
+            
+        user_input = input()
+    
     return order_list
 
 
@@ -100,22 +87,13 @@ def get_total_price(order_list):
     """
     total = 0
     for item in order_list:
-        for key in menu:
-            if key == item:
-                total = total + menu[key]
-                break
-
-    for i in order_list:
-        for j in original_flavors:
-            if i == j:
-                total = total + original_price
-                break
-
-    for i in order_list:
-        for j in signature_flavors:
-            if i == j:
-                total = total + signature_price
-                break
+        #item = item.lower()
+        if item in menu:
+            total += menu[item]
+        elif item in original_flavors:
+            total += original_price
+        elif item in signature_flavors:
+            total += signature_price
 
     return total
 
@@ -128,8 +106,9 @@ def print_order(order_list):
     print("Your order is: ")
     for i in order_list:
         print ("- %s" %i)
-    print ("that will be KD %s." % get_total_price(order_list))
-    accept_credit_card(get_total_price(order_list))
+    total_price = get_total_price(order_list)
+    print ("that will be KD %s." %total_price)
+    accept_credit_card(total_price)
     print ("Thanks for shopping at %s." %cupcake_shop_name)
 
 
